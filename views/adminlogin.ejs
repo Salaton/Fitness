@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<link rel="stylesheet" href="CSS/style.css">
+
+<form action="/adminlogin" method="POST"">
+    <h1 class = "page-heading">Welcome Admin</h1>
+      <div class="content">
+        <div class="form-group">
+          <label for="Username"></label>
+          <input class="form-control" name="username" type="text"  placeholder="Username" required >
+        </div>
+        <div class="form-group">
+          <label for="password"></label>
+          <input class="form-control" name="password" type="password"  placeholder="Password" required  pattern=".{4,10}" required title="4 to 10 characters">
+          
+        </div>
+        <button class="btn btn-primary btn-block">Login</button>
+      </div>
+</form>
+
+  

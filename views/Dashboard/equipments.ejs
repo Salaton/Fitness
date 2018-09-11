@@ -1,0 +1,100 @@
+<%include partials/dashboardHeader%>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Add Equipments</h4>
+                            </div>
+                            <div class="content">
+                                <form action="/Dashboard/equipments" method="POST">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Company</label>
+                                                <input type="text" class="form-control" disabled placeholder="Company" value="Rocky Gym">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Equipment Name</label>
+                                                <input type="text" name="name" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Amount</label>
+                                                <input type="number" name="amount" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Category</label>
+                                                <input type="text" class="form-control" name="category" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                   <hr>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Add Equipment</button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/home/sala/Documents/Gym/index.html">
+                               Website
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    &copy; 2018 <a href="">Gym</a>, made with love for a better gym system
+                </p>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+
+</body>
+
+    <!--   Core JS Files   -->
+    <script type="text/javascript" src="assets/js/todos.js"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!--  Charts Plugin -->
+    <script src="assets/js/chartist.min.js"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+    <script src="assets/js/light-bootstrap-dashboard.js"></script>
+</html>

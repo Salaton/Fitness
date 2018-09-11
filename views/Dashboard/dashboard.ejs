@@ -1,0 +1,115 @@
+<%include partials/dashboardHeader%>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title"></h4>
+                                <p class="category"></p>
+                            </div>
+                            <div class="content">
+                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+                                <div class="col-md-6">
+                        <div class="header">
+                            <h2>TO-DO List <i class="fa fa-plus"></i></h2>
+                        </div>
+                        <div class="content" id="container">
+                          
+                              
+                              <input type="text" name="" >
+                              <ul class="todos">
+                               
+                              </ul>
+                              
+                          
+                            </div>
+
+                            
+                    </div>
+
+                                <div class="footer">
+                                    <div class="legend">
+                                        
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title"></h4>
+                                <p class="category"></p>
+                            </div>
+                            <div class="content">
+                                <div id="chartHours" class="ct-chart"></div>
+                                <div class="footer">
+                                    <div class="legend">
+                                        
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+    
+
+    </div>
+</div>
+</body>
+
+
+
+    <!--   Core JS Files   -->
+    <script type="text/javascript" src="../assets/js/todos.js"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!--  Charts Plugin -->
+    <script src="assets/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/bootstrap-notify.js"></script>
+
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+    <script src="assets/js/light-bootstrap-dashboard.js"></script>
+
+    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script src="assets/js/demo.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            demo.initChartist();
+
+            $.notify({
+                icon: 'pe-7s-gift',
+                message: "Welcome to <b>Gym Dashboard</b> - where you can view the gym details."
+
+            },{
+                type: 'info',
+                timer: 400
+            });
+
+        });
+    </script>
+
+</html>
+
+
+

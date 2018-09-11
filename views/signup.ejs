@@ -1,0 +1,74 @@
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    </head>
+        <form class="signupForm" action="/signup" method="POST">
+        <h1>Sign Up</h1>
+        <div class="content">
+          
+       
+        <fieldset>
+          <legend><span class="number">1</span>Your Profile info</legend>
+          <div class="input-group user-details">
+            <span class="input-group-addon">
+              <ion-icon name="person"></ion-icon> 
+            </span>
+            <input type="text" name="fullname" class="form-control" placeholder="Fullname"/>
+          </div>
+          <br>
+          <div class="input-group user-details">
+            <span class="input-group-addon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="email" name="email"  class="form-control" placeholder="Email"/>
+          </div>
+          <br>
+          <div class="input-group user-details">
+            <span class="input-group-addon">
+              <ion-icon name="contact"></ion-icon>
+            </span>
+            <input type="text" name="username" class="form-control" placeholder="Username"/>
+          </div>
+          <br>
+          <div class="input-group user-details">
+            <span class="input-group-addon">
+             <ion-icon name="lock"></ion-icon>
+            </span>
+            <input type="password"  name="password" class="form-control" placeholder="Password"/>
+          </div>
+          <br>
+        </fieldset>
+        <fieldset>
+          <legend><span class="number">2</span>Your Basic info</legend>
+          <br>
+          <div class="input-group user-details">
+            <span class="input-group-addon">
+             <ion-icon name="call"></ion-icon>
+            </span>
+            <input type="text" name="phoneno" class="form-control" placeholder="Phone Number"/>
+          </div>
+          <br>
+          <div class="input-group user-details">
+            <span class="input-group-addon">
+             <ion-icon name="home"></ion-icon>
+            </span>
+            <input type="text" name="address" class="form-control" placeholder="Home Address"/>
+          </div>
+        </fieldset>
+        <br>
+        <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
+        <br>
+        <div class="text-center">
+          <span class="txt3">
+            Have an account?
+          </span>
+          <a class="txt2" href="/login">Log in here</a>
+        </div>
+         </div>
+      </form>
+</html>

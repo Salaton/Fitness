@@ -1,0 +1,125 @@
+.tabs .tab-content-wrap .tab-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+.tabs .tab-content-wrap .tab-content.active {
+  opacity: 1;
+  visibility: visible;
+}
+.tabs .class-schedule {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.tabs .class-schedule li {
+  width: 25%;
+  float: left;
+  border-right: 1px solid rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  list-style: none;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.tabs .class-schedule li:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.02);
+}
+.tabs .class-schedule li:nth-child(5) {
+  border-left: 1px solid rgba(255, 255, 255, 0.02);
+}
+.tabs .class-schedule li span {
+  display: block;
+  margin-bottom: 20px;
+}
+.tabs .class-schedule li span img {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+
+/*round 2*/
+.tab-nav li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 14.285%;
+  text-align: center;
+  list-style: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+ .tab-nav li a {
+  padding: 10px;
+  width: 100%;
+  float: left;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  color: #e6e6e6;
+}
+ .tab-nav li a:hover {
+  color: white;
+}
+ .tab-nav li.active a {
+  background: #F85A16;
+  color: #fff;
+}
+.tab-nav {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.footer-main{
+  background:#233045;
+  height:auto;
+  bottom:100%
+}
+footer .footer-main #spacing{
+    padding:20px 30px
+}
+footer .footer-bottom{
+  background:#233045;
+  height:auto
+}
+footer .footer-bottom #spacing-bottom{
+  padding:10px 30px
+}
+footer .footer-bottom #spacing-bottom p{
+  color:#919191;
+  font-size:17px
+}
+footer h4{
+  border-bottom:1px solid #9C4B1C;
+  color:#ffffff;
+  padding-bottom:10px;
+  font-weight:500
+}
+footer p>a{
+  font-size:15px;
+  color:#919191  
+}
+footer .footer-list li{
+  list-style:none;
+}
+footer .newsletter input{
+  -moz-border-radius:0px / 0px;
+  -webkit-border-radius:0px 0px;
+  border-radius:0px / 0px
+}

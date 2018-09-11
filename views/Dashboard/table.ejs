@@ -1,0 +1,128 @@
+<%include partials/dashboardHeader%>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Equipment Table </h4>
+                                <p class="category">Here is a table that displays available equipments</p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>Name</th>
+                                        <th>Amount</th>
+                                        <th>Category</th>
+                                    </thead>
+                                    <% equipment.forEach(function(equipment){ %>
+                                    
+                                        <tbody>
+                                            <tr>
+                                                <td><%= equipment.name %></td>
+                                                <td><%= equipment.amount %></td>
+                                                <td><%= equipment.category %></td>
+                                            </tr>
+                                        </tbody>
+
+                                    <% }); %>             
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="card card-plain">
+                            <div class="header">
+                                <h4 class="title">Table on Plain Background</h4>
+                                <p class="category">Here is a subtitle for this table</p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>Username</th>
+                                        <th>Fullname</th>
+                                        <th>Email</th>
+                                        <th>Phone no</th>
+                                        <th>Address</th>
+                                    </thead>
+                                    <% user.forEach(function(user){ %>
+                                    
+                                        <tbody>
+                                            <tr>
+                                                <td><%= user.username %></td>
+                                                <td><%= user.fullname %></td>
+                                                <td><%= user.email %></td>
+                                                <td><%= user.phoneno %></td>
+                                                <td><%= user.address %></td>
+                                            </tr>
+                                        </tbody>
+
+                                    <% }); %>             
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/home/sala/Documents/Gym/index.html">
+                               Website
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    &copy; 2018 <a href="">Gym</a>, made with love for a better gym system
+                </p>
+            </div>
+        </footer>
+
+
+    </div>
+</div>
+
+
+</body>
+
+    <!--   Core JS Files   -->
+    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Checkbox, Radio & Switch Plugins -->
+	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+
+	<!--  Charts Plugin -->
+	<script src="assets/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="assets/js/light-bootstrap-dashboard.js"></script>
+
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+	<script src="assets/js/demo.js"></script>
+
+
+</html>
