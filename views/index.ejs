@@ -16,7 +16,7 @@
       <div class="container">
             <div class="row">
               <h2>What we offer</h2>
-              <%= classes.forEach(function(classes){ %>
+              <% classes.forEach(function(classes){ %>
               <div class="col-lg-4 col-sm-6">
                 <div class="thumbnail">
                   <img src ="<%= classes.image %>"  >
@@ -29,7 +29,7 @@
              <% }); %>   
              <div>
                <% if(!currentUser){ %>
-                  <a href="/login" class="btn btn-select-plan btn-lg">Enroll</a>
+                  <a href="/login" class="btn btn-primary btn-lg">Enroll</a>
                <% } else { %>
                   <a href="enroll" class="btn btn-success btn-lg">Enroll here!</a>
             <% } %>
@@ -38,13 +38,71 @@
             </div>
             
           </div>
-  
-  
     </div>
-    
-    
   </section>
   
+  <div
+	id="schedule"
+	class="bg"
+	style="background-image: url(https://images.unsplash.com/photo-1454560830408-e68fb19d3e8c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6d375ae3da87f73f25017dd370c2d174&auto=format&fit=crop&w=1132&q=80);"
+>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center heading animate-box">
+				<h2>Daily Class Schedule</h2>
+			</div>
+		</div>
+
+		<div class="row animate-box">
+			<!-- Tabs -->
+			<div class="tab-content-wrap">
+				<div class="tab-content tab-content active" data-tab-content="1">
+					<ul class="class-schedule">
+						<li class="text-center">
+							<span class="time">6:00 AM - 8AM</span>
+							<h4>Cardio</h4>
+							<small>Angel Adams</small>
+						</li>
+						<li class="text-center">
+							<span class="time">9:00 AM - 1PM</span>
+							<h4>Body Building</h4>
+							<small>Angel Adams</small>
+						</li>
+						<li class="text-center">
+							<span class="time">2:00 PM - 4:00 PM</span>
+							<h4>Yoga</h4>
+							<small>Angel Adams</small>
+						</li>
+						<li class="text-center">
+							<span class="time">5:00 PM - 7PM</span>
+							<h4>Boxing</h4>
+							<small>Angel Adams</small>
+						</li>
+						<li class="text-center">
+							<span class="time">6:00 AM - 8AM</span>
+							<h4>Yoga</h4>
+							<small>Angel Adams</small>
+						</li>
+						<li class="text-center">
+							<span class="time">9:00 AM - 1PM</span>
+							<h4>Cardio</h4>
+							<small>Angel Adams</small>
+						</li>
+						<li class="text-center">
+							<span class="time">2:00 PM - 4:00 PM</span>
+							<h4>Body Building</h4>
+							<small>Angel Adams</small>
+						</li>
+						<li class="text-center">
+							<span class="time">5:00 PM - 7PM</span>
+							<h4>Ballet Dance</h4>
+							<small>Angel Adams</small>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
   <div class="pimg2">
     <div class="ptext">
@@ -64,9 +122,9 @@
             </div>
           </div>
         </div>
-          <% trainer.forEach(function(trainer){ %>
         <div class="row text-center">
           
+          <% trainer.forEach(function(trainer){ %>
 
           <div class="col-md-4 col-sm-6">
             <div class="team-section-grid animate-box" style="background-image: url(<%= trainer.image %>);">
@@ -84,14 +142,15 @@
               </div>
             </div>
           </div>
-
-
           <% }); %>    
-
         </div>
       </div>
+
+      
     </div>
   </section>
+
+  
 
   <div class="pimg3">
     <div class="ptext">
@@ -134,12 +193,12 @@
                 Overview of classes;
               </p>
               <ul class="classes">
-                <li>10+ Cardio Classes</li>
-                <li class="color">10+ Swimming Lesson</li>
-                <li>10+ Yoga Classes</li>
-                <li class="color">10+ Body Building</li>
-                <li>10+ Dance Classes</li>
-                <li class="color">10+ Body Combat Classes</li>
+                <li>10 Cardio Classes</li>
+                <li class="color">10 Swimming Lesson</li>
+                <li>10 Yoga Classes</li>
+                <li class="color">10 Body Building</li>
+                <li>10 Dance Classes</li>
+                <li class="color">10 Body Combat Classes</li>
 
               </ul>
                 <% if(!currentUser){ %>
@@ -163,12 +222,12 @@
                 Overview of classes;
               </p >
               <ul class="classes">
-                <li>20+ Cardio Classes</li>
-                <li class="color">20+ Swimming Lesson</li>
-                <li>30+ Yoga Classes</li>
-                <li class="color">20+ Body Building</li>
-                <li>20+ Dance Classes</li>
-                <li class="color">20+ Body Combat Classes</li>
+                <li>20 Cardio Classes</li>
+                <li class="color">20 Swimming Lesson</li>
+                <li>30 Yoga Classes</li>
+                <li class="color">20 Body Building</li>
+                <li>20 Dance Classes</li>
+                <li class="color">20 Body Combat Classes</li>
 
               </ul>
                <% if(!currentUser){ %>
@@ -189,12 +248,12 @@
                 Overview of classes;
               </p>
               <ul class="classes">
-                <li>30+ Cardio Classes</li>
-                <li class="color">30+ Swimming Lesson</li>
-                <li>30+ Yoga Classes</li>
-                <li class="color">30+ Body Building</li>
-                <li>30+ Dance Classes</li>
-                <li class="color">30+ Body Combat Classes</li>
+                <li>30 Cardio Classes</li>
+                <li class="color">30 Swimming Lesson</li>
+                <li>30 Yoga Classes</li>
+                <li class="color">30 Body Building</li>
+                <li>30 Dance Classes</li>
+                <li class="color">30 Body Combat Classes</li>
 
 
               </ul>
