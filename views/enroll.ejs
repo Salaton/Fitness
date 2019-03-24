@@ -2,25 +2,28 @@
 <%include partials/header%>
 
 
-            
-                    <div class="content">
-                        <form action="/enroll" method="POST">
+<div class = "limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+                        <form action="/enroll" method="POST" class="login_form">
                                     <div class="row">
-                                    <h2 class="title">Enroll to a class</h2>
-                                        <div class="col-md-5">
+                                    <h2 class="title" style="text-align:center;">Enroll to a class</h2>
+                                        <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Username </label>
                                                 <input type="text" class="form-control" name="username" value="<%= currentUser.username %>">
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                    </div>
+
+                                    <div class="row">
+                                    <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
                                                 <input type="email" name="email" value=" <%= currentUser.email %> " class="form-control" placeholder="Email">
                                             </div>
                                         </div>
-
-                                    </div>
+                                        </div>
 
                                     <div class="row">
                                         <div class="col-md-12">
@@ -36,7 +39,7 @@
                                             <div class="form-group">
                                                 <label>Class</label>
                                                 <p>
-                                                  Include the type of services you want 
+                                                  Select the type of services you want 
                                                 </p>
                                                 <div>
                                                 <label for="yoga" class="yoga">Yoga Class:
@@ -75,20 +78,32 @@
                                     
                                 <button class="btn btn-info btn-fill " type="submit" style="border-radius: 25rem; width: 100%;">Enroll</button>
                                 <hr>    <div>
-                                    <h3>You are currently enrolled to:</h3>
+                                      
+
+                                </div>
+                                
+                                    <div class="clearfix"></div>
+                                </form>
+                                <div class="login100-more" style="background-image: url('/img-gif/graphic3.svg');">
+
+                                <div class="enrolled_class">
+                                
+                                <h3>You are currently enrolled to:</h3>
                                    
                                      <% enroll.forEach(function(enroll){ %>
                                      <% if (currentUser.username==enroll.username){%>
                                         <h4><%= enroll.enroll %></h4>
                                      <% } else { -%>
                                         <!-- <h4>You are not registered for any class</h4> -->
-                                     <% } -%>
-                                     <% }); %>   
-
+                                     <% } %>
+                                     <% }); %> 
                                 </div>
                                 
-                                    <div class="clearfix"></div>
-                                </form>
+
+                                
+            </div>
+        </div>
+    </div>
                             
 
                            
