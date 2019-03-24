@@ -288,15 +288,15 @@
 				</div>
 				<div class="col-md-6 animate-box">
 					<h3>Get In Touch</h3>
-					<form action="/contact" method="POST" id="contact_form">
+					<form action="/" method="POST" id="contact_form">
 						<div class="row form-group">
 							<div class="col-md-6">
 								<!-- <label for="fname">First Name</label> -->
-								<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+								<input type="text" id="firstname" class="form-control" placeholder="Your firstname">
 							</div>
 							<div class="col-md-6">
 								<!-- <label for="lname">Last Name</label> -->
-								<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+								<input type="text" id="lastname" class="form-control" placeholder="Your lastname">
 							</div>
 						</div>
 
@@ -331,4 +331,32 @@
 			
 		</div>
 	</div>
+
+
+  <script>
+    document.getElementById('contact_form').addEventListener('submit', submitForm);
+    function submitForm(e){
+      e.preventDefault();
+      
+      const email = document.querySelector('#email').value;
+      const firstname = document.querySelector('#firstname').value;
+      const lastname = document.querySelector('#lastname').value;
+      const subject = document.querySelector('#subject').value;
+      const message = document.querySelector('#message').value;
+      const captcha = document.querySelector('#g-recaptcha-response').value;
+      fetch('/', {
+        method:'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-type':'application/json'
+        },
+        body:JSON.stringify({ email: email,firstname:firstname, lastname:lastname,subject:subject, message:message, captcha: captcha})
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        alert(data.msg);
+      });
+    }
+  </script>
 <%include partials/footer%>

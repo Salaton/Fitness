@@ -2,11 +2,13 @@ var express = require("express"),
 	mongoose = require("mongoose"),
 	passport = require("passport"),
 	bodyParser = require("body-parser"),
+	request = require("request"),
 	methodOverride = require("method-override"),
 	User = require("./models/user"),
 	Class = require("./models/classes"),
 	Trainer = require("./models/trainer"),
 	Equipment = require("./models/equipment"),
+	Response = require("./models/response"),
 	Admin = require("./models/admin"),
 	Enroll = require("./models/enroll"),
 	LocalStrategy = require("passport-local"),
@@ -20,6 +22,7 @@ var app = express();
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(methodOverride("_method"));
 
 app.use(
@@ -98,6 +101,23 @@ app.post("/", function(req, res) {
 		//If Successful
 		return res.json({ success: true, msg: "Captcha passed" });
 	});
+
+	//handle responses(get in touch info)... -->
+	Response.create(
+		new Response({
+			email: req.body.email,
+			firstname: req.body.firstname,
+			lastname: req.body.lastname,
+			subject: req.body.subject,
+			message: req.body.message
+		}),
+		function(err, response) {
+			if (err) {
+				console.log(err);
+				return res.render("/");
+			}
+		}
+	);
 });
 
 app.get("/classes", function(req, res) {
